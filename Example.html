@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml; IW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Custom Tag</title>
+</head>
+
+<style type="text/css">
+
+@media all 
+
+{
+IW\:button {
+	font-size: 24pt;
+	background-color:#999;
+	border-top:1px solid #CCC;
+	border-left:1px solid #CCC;
+	border-right:2px solid black;
+	border-bottom:2px solid black;
+	border-radius:5px;
+	font-family:"Times New Roman", Times, serif;
+	cursor:pointer; 
+	color:black;
+	padding:1px;
+	padding-left:2px;
+	padding-right:2px;
+}
+} 
+span{
+	color:white;
+	padding-left:2px;
+	padding-right:4px;
+	border-right: 2px solid #020;
+}
+
+</style>
+
+<script type="text/javascript">
+function ActasMytag(myTag)
+{
+	myTag.style.borderLeft = '1px solid #CCC';
+	myTag.style.borderTop = '1px solid #CCC';
+	myTag.style.borderRight = '2px solid black';
+	myTag.style.borderBottom = '2px solid black';
+}
+
+function ActasButton(myTag)
+{
+	myTag.style.borderLeft = '1px solid black';
+	myTag.style.borderTop = '1px solid black';
+	myTag.style.borderRight = '2px solid #CCC';
+	myTag.style.borderBottom = '2px solid #CCC';
+}
+</script>
+
+<body>
+
+<IW:button onmousedown="ActasButton(this)" onmouseup="ActasMytag(this)"><span>IW</span>&nbsp;Custom Button</IW:button>
+
+</body>
+</html>
